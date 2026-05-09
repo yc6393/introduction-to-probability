@@ -31,3 +31,5 @@ Each chapter ends with an R section (§X.8 or similar) that illustrates probabil
 |------|-------------|
 | `ch1.docx` | Ch. 1 R section (source) |
 | `ch1_python.ipynb` | Ch. 1 Python notebook |
+| `ch2.docx` | Ch. 2 R section (source) |
+| `ch2_python.ipynb` | Ch. 2 Python notebook |
