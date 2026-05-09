@@ -16,7 +16,9 @@ Each chapter ends with an R section (§X.8 or similar) that illustrates probabil
 ## Notebook conventions
 
 - **Style**: prose-first, same voice as the textbook. Explain what the code does in markdown cells, then show the code. No R-vs-Python comparison frames.
-- **Libraries**: `numpy` (arrays, simulation), `scipy.special` (special functions), `matplotlib.pyplot` (plots), `math` (exact integer arithmetic). Import all at the top.
+- **Copyright**: do not copy sentences from the source word-for-word. Restate and paraphrase all explanatory prose; only the mathematical logic of code examples may closely mirror the originals.
+- **Libraries**: `numpy` (arrays, simulation), `scipy.special` (special functions), `seaborn` (plots), `math` (exact integer arithmetic). Import only libraries that are actually used in the notebook.
+- **Plotting**: use **seaborn** for all visualisations. Do not use `matplotlib.pyplot` directly.
 - **Random generator**: create once as `rng = np.random.default_rng(seed=42)` and reuse.
 - **Indexing note**: mention 0-based indexing naturally where it matters, without framing it as a difference from R.
 - **Replicate idiom**: list comprehensions `[expr for _ in range(N)]` are the standard way to repeat a random experiment N times.
