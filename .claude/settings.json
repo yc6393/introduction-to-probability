@@ -19,10 +19,9 @@
       "PowerShell(Get-Command*)",
       "PowerShell(*Out-File*)",
       "PowerShell(*jupyter-nbconvert*)",
-      "PowerShell(C:\\Users\\Alexe\\anaconda3\\python.exe*)",
-      "PowerShell(C:\\Users\\Alexe\\anaconda3\\Scripts\\jupyter.exe*)",
-      "PowerShell(*anaconda3\\python.exe*)",
-      "PowerShell(*anaconda3\\Scripts\\jupyter.exe*)"
+      "PowerShell(ls *)",
+      "PowerShell(& \"C:\\\\Users\\\\Alexe\\\\anaconda3\\\\python.exe\" *)",
+      "PowerShell(& \"C:\\\\Users\\\\Alexe\\\\Anaconda3\\\\Scripts\\\\jupyter-nbconvert.exe\" *)"
     ]
   }
 }
