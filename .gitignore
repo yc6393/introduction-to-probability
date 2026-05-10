@@ -78,6 +78,10 @@ target/
 # Jupyter Notebook
 .ipynb_checkpoints
 
+# Claude Code
+.claude/settings.local.json
+.claude/worktrees/
+
 # IPython
 profile_default/
 ipython_config.py
