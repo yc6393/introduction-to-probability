@@ -6,6 +6,12 @@ Blitzstein & Hwang, *Introduction to Probability* (2nd ed., Chapman & Hall/CRC).
 
 Each chapter ends with an R section (§X.8 or similar) that illustrates probability concepts via simulation and computation. The goal of this project is to produce a Jupyter notebook for each chapter that re-implements those ideas in Python — written in the same expository style as the original, not as a comparison to R.
 
+## Environment
+
+- **Python**: `C:\Users\Alexe\anaconda3\python.exe` (Anaconda install; `python-docx` is installed)
+- **Read a `.docx`**: `& "C:\Users\Alexe\anaconda3\python.exe" -c "import docx; doc = docx.Document(r'chN.docx'); [print(p.text) for p in doc.paragraphs]"` — pipe output to a temp file with `| Out-File ... -Encoding utf8` to handle Unicode
+- **Execute a notebook**: `& "C:\Users\Alexe\anaconda3\python.exe" -m jupyter nbconvert --to notebook --execute --inplace chN_python.ipynb`
+
 ## Workflow per chapter
 
 1. The source material arrives as a `.docx` file (e.g. `ch2.docx`) containing the R section of that chapter.
@@ -17,8 +23,8 @@ Each chapter ends with an R section (§X.8 or similar) that illustrates probabil
 
 - **Style**: prose-first, same voice as the textbook. Explain what the code does in markdown cells, then show the code. No R-vs-Python comparison frames.
 - **Copyright**: do not copy sentences from the source word-for-word. Restate and paraphrase all explanatory prose; only the mathematical logic of code examples may closely mirror the originals.
-- **Libraries**: `numpy` (arrays, simulation), `scipy.special` (special functions), `seaborn` (plots), `math` (exact integer arithmetic). Import only libraries that are actually used in the notebook.
-- **Plotting**: use **seaborn** for all visualisations. Do not use `matplotlib.pyplot` directly. Call `sns.set_theme(palette="deep")` once in the imports cell; do not hardcode colours in individual plot calls.
+- **Libraries**: `numpy` (arrays, simulation), `scipy.stats` (distributions — PMF, CDF, etc.), `scipy.special` (special functions such as `comb`), `seaborn` (plots), `matplotlib.pyplot` (figure/axes creation), `math` (exact integer arithmetic). Import only libraries that are actually used in the notebook.
+- **Plotting**: use **seaborn** for all plot calls. `matplotlib.pyplot` is imported as `plt` and used only for `plt.subplots()`, `plt.tight_layout()`, and `plt.show()` — never for direct plot calls. Call `sns.set_theme(palette="deep")` once in the imports cell; do not hardcode colours in individual plot calls.
 - **Random generator**: create once as `rng = np.random.default_rng(seed=42)` and reuse.
 - **Indexing note**: mention 0-based indexing naturally where it matters, without framing it as a difference from R.
 - **Replicate idiom**: list comprehensions `[expr for _ in range(N)]` are the standard way to repeat a random experiment N times.
@@ -33,3 +39,7 @@ Each chapter ends with an R section (§X.8 or similar) that illustrates probabil
 | `ch1_python.ipynb` | Ch. 1 Python notebook |
 | `ch2.docx` | Ch. 2 R section (source) |
 | `ch2_python.ipynb` | Ch. 2 Python notebook |
+| `ch3.docx` | Ch. 3 R section (source) |
+| `ch3_python.ipynb` | Ch. 3 Python notebook |
+| `ch4.docx` | Ch. 4 R section (source) |
+| `ch4_python.ipynb` | Ch. 4 Python notebook |
