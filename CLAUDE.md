@@ -9,7 +9,10 @@ Each chapter ends with an R section (§X.8 or similar) that illustrates probabil
 ## Environment
 
 - **Python**: `C:\Users\Alexe\anaconda3\python.exe` (Anaconda install; `python-docx` is installed)
-- **Read a `.docx`**: `& "C:\Users\Alexe\anaconda3\python.exe" -c "import docx; doc = docx.Document(r'chN.docx'); [print(p.text) for p in doc.paragraphs]"` — pipe output to a temp file with `| Out-File ... -Encoding utf8` to handle Unicode
+- **Read a `.docx`**: The `.docx` may be locked if open in Word. Always copy it first, then read via a temp script:
+  1. `Copy-Item "c:\Users\Alexe\OneDrive\Yura - College\Geo\introduction-to-probability\chN.docx" "$env:TEMP\chN_copy.docx" -Force`
+  2. Write a script to `$env:TEMP\read_chN.py` with `sys.stdout.reconfigure(encoding='utf-8')` to handle Unicode, then run:  
+     `& "C:\Users\Alexe\anaconda3\python.exe" "$env:TEMP\read_chN.py" | Out-File "$env:TEMP\chN_text.txt" -Encoding utf8`
 - **Execute a notebook**: `& "C:\Users\Alexe\anaconda3\python.exe" -m jupyter nbconvert --to notebook --execute --inplace chN_python.ipynb`
 
 ## Workflow per chapter
@@ -43,3 +46,5 @@ Each chapter ends with an R section (§X.8 or similar) that illustrates probabil
 | `ch3_python.ipynb` | Ch. 3 Python notebook |
 | `ch4.docx` | Ch. 4 R section (source) |
 | `ch4_python.ipynb` | Ch. 4 Python notebook |
+| `ch5.docx` | Ch. 5 R section (source) |
+| `ch5_python.ipynb` | Ch. 5 Python notebook |

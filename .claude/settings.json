@@ -21,7 +21,8 @@
       "PowerShell(*jupyter-nbconvert*)",
       "PowerShell(ls *)",
       "PowerShell(& \"C:\\\\Users\\\\Alexe\\\\anaconda3\\\\python.exe\" *)",
-      "PowerShell(& \"C:\\\\Users\\\\Alexe\\\\Anaconda3\\\\Scripts\\\\jupyter-nbconvert.exe\" *)"
+      "PowerShell(& \"C:\\\\Users\\\\Alexe\\\\Anaconda3\\\\Scripts\\\\jupyter-nbconvert.exe\" *)",
+      "Write(C:\\Users\\Alexe\\AppData\\Local\\Temp\\*)"
     ]
   }
 }
